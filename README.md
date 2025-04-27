@@ -37,8 +37,8 @@ For full requirements, see [PRD](.ai/prd.md).
 ### Installation
 ```bash
 # Clone the repo
-git clone https://github.com/<your-org>/10x-cards.git
-cd 10x-cards
+git clone https://github.com/matkarny/10xDevs-project
+cd 10xDevs-project
 
 # Install dependencies
 npm install
