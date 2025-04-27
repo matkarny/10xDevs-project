@@ -1,94 +1,94 @@
-# 10x Astro Starter
+# 10x-cards
 
-A modern, opinionated starter template for building fast, accessible, and AI-friendly web applications.
+> Rapidly create and manage educational flashcards using AI and spaced repetition.
+
+## Table of Contents
+1. [Project Name](#project-name)  
+2. [Project Description](#project-description)  
+3. [Tech Stack](#tech-stack)  
+4. [Getting Started Locally](#getting-started-locally)  
+5. [Available Scripts](#available-scripts)  
+6. [Project Scope](#project-scope)  
+7. [Project Status](#project-status)  
+8. [License](#license)  
+
+## Project Name
+10x-cards
+
+## Project Description
+10x-cards is a web application that streamlines flashcard creation for learners. By leveraging large language models (via Openrouter.ai), it auto-generates question-and-answer pairs from user-provided text. Users can review, edit, and save cards, then study them using a spaced repetition algorithm—all within a secure, scalable environment.
+
+For full requirements, see [PRD](.ai/prd.md).
 
 ## Tech Stack
+- **Frontend**: Astro 5, React 19, TypeScript 5  
+- **Styling**: Tailwind CSS 4, Shadcn/ui  
+- **Backend**: Supabase (PostgreSQL, Auth, BaaS)  
+- **AI**: Openrouter.ai (multi-model API routing, cost limits)  
+- **CI/CD**: GitHub Actions  
+- **Hosting**: DigitalOcean (Docker)
 
-- [Astro](https://astro.build/) v5.5.5 - Modern web framework for building fast, content-focused websites
-- [React](https://react.dev/) v19.0.0 - UI library for building interactive components
-- [TypeScript](https://www.typescriptlang.org/) v5 - Type-safe JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) v4.0.17 - Utility-first CSS framework
+## Getting Started Locally
 
-## Prerequisites
+### Prerequisites
+- Node.js v22.14.0 (see `.nvmrc`)  
+- npm (or yarn)
 
-- Node.js v22.14.0 (as specified in `.nvmrc`)
-- npm (comes with Node.js)
-
-## Getting Started
-
-1. Clone the repository:
-
+### Installation
 ```bash
-git clone https://github.com/przeprogramowani/10x-astro-starter.git
-cd 10x-astro-starter
-```
+# Clone the repo
+git clone https://github.com/matkarny/10xDevs-project
+cd 10xDevs-project
 
-2. Install dependencies:
-
-```bash
+# Install dependencies
 npm install
 ```
 
-3. Run the development server:
+### Environment Variables
+Create a `.env` file in the project root with:
+```env
+SUPABASE_URL=your_supabase_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
+OPENROUTER_API_KEY=your_openrouter_key
+```
 
+### Run Locally
 ```bash
 npm run dev
 ```
-
-4. Build for production:
-
-```bash
-npm run build
-```
+Open [http://localhost:3000](http://localhost:3000).
 
 ## Available Scripts
+In `package.json`:
+- `npm run dev`       – start development server  
+- `npm run build`     – build for production  
+- `npm run preview`   – preview production build  
+- `npm run astro`     – Astro CLI  
+- `npm run lint`      – run ESLint  
+- `npm run lint:fix`  – auto-fix ESLint issues  
+- `npm run format`    – run Prettier
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues
+## Project Scope
 
-## Project Structure
+### In Scope (MVP)
+- AI-powered flashcard generation (accept/edit/reject)  
+- Manual flashcard create/edit/delete  
+- User authentication & account management  
+- Spaced repetition integration  
+- Data storage in Supabase  
+- Basic generation metrics
 
-```md
-.
-├── src/
-│   ├── layouts/    # Astro layouts
-│   ├── pages/      # Astro pages
-│   │   └── api/    # API endpoints
-│   ├── components/ # UI components (Astro & React)
-│   └── assets/     # Static assets
-├── public/         # Public assets
-```
+### Out of Scope
+- Custom repetition algorithm  
+- Gamification  
+- Mobile applications  
+- Document imports (PDF, DOCX)  
+- Public API  
+- Flashcard sharing  
+- Advanced notifications or search
 
-## AI Development Support
-
-This project is configured with AI development tools to enhance the development experience, providing guidelines for:
-
-- Project structure
-- Coding practices
-- Frontend development
-- Styling with Tailwind
-- Accessibility best practices
-- Astro and React guidelines
-
-### Cursor IDE
-
-The project includes AI rules in `.cursor/rules/` directory that help Cursor IDE understand the project structure and provide better code suggestions.
-
-### GitHub Copilot
-
-AI instructions for GitHub Copilot are available in `.github/copilot-instructions.md`
-
-### Windsurf
-
-The `.windsurfrules` file contains AI configuration for Windsurf.
-
-## Contributing
-
-Please follow the AI guidelines and coding practices defined in the AI configuration files when contributing to this project.
+## Project Status
+This project is in active development (MVP phase). See [issues](https://github.com/matkarny/10xDevs-project) for progress.
 
 ## License
-
-MIT
+This project is licensed under the MIT License.
